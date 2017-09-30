@@ -18,5 +18,4 @@ public class ButtonSpawn : MonoBehaviour {
     {
         Spawner.GetComponentInChildren<WaveSpawner>().NewSpawn(Index);
     }
-
 }

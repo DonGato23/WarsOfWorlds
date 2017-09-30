@@ -27,6 +27,7 @@ public class WaveSpawner : MonoBehaviour {
             spawn.transform.tag = LayerMask.LayerToName(gameObject.layer);
             spawn.GetComponent<CharacterScript>().TagSearch = GetComponent<HeroeControl>().TagSearch;
             spawn.GetComponent<SpriteRenderer>().sortingLayerName = GetComponent<SpriteRenderer>().sortingLayerName;
+            spawn.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
             spawn.layer = gameObject.layer;
             //spawn.transform.rotation = new Quaternion(spawn.transform.rotation.x, transform.rotation.y, spawn.transform.rotation.z, spawn.transform.rotation.w);
             //spawn.transform.GetChild(0).tag = spawn.tag;

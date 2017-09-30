@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: 4cb387a2d772bfb4a882e0459da7abc9
+timeCreated: 1506522073
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SwordmanAttack_0
+    21300002: SwordmanAttack_1
+    21300004: SwordmanAttack_2
+    21300006: SwordmanAttack_3
+    21300008: SwordmanAttack_4
+    21300010: SwordmanAttack_5
+    21300012: SwordmanAttack_6
+    21300014: SwordmanAttack_7
+    21300016: SwordmanAttack_8
+    21300018: SwordmanAttack_9
+    21300020: SwordmanAttack_10
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SwordmanAttack_0
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 48
+        height: 89
+      alignment: 9
+      pivot: {x: 0.49999937, y: 0.4852168}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 127
+        width: 63
+        height: 79
+      alignment: 9
+      pivot: {x: 0.34336782, y: 0.574945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_2
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 127
+        width: 51
+        height: 80
+      alignment: 9
+      pivot: {x: 0.21622004, y: 0.5657852}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_3
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 128
+        width: 68
+        height: 80
+      alignment: 9
+      pivot: {x: 0.26781687, y: 0.54111576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 54
+        height: 91
+      alignment: 9
+      pivot: {x: 0.56091213, y: 0.50722927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 60
+        height: 110
+      alignment: 9
+      pivot: {x: 0.58771336, y: 0.41627353}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_6
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 0
+        width: 63
+        height: 94
+      alignment: 9
+      pivot: {x: 0.55221075, y: 0.4930017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_7
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 0
+        width: 94
+        height: 74
+      alignment: 9
+      pivot: {x: 0.2620538, y: 0.6066786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_8
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 81
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28071576, y: 0.6389827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_9
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 66
+        height: 77
+      alignment: 9
+      pivot: {x: 0.32058623, y: 0.59397876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SwordmanAttack_10
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 0
+        width: 49
+        height: 82
+      alignment: 9
+      pivot: {x: 0.35231858, y: 0.56418073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

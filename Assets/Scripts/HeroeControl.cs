@@ -10,10 +10,12 @@ public class HeroeControl : MonoBehaviour {
     public float Life;
     private Animator _anim;
     public GameObject MagicBall;
+    private SpriteRenderer _spriteRender;
 
     // Use this for initialization
     void Start () {
         _anim = GetComponent<Animator>();
+        _spriteRender = GetComponent<SpriteRenderer>();
 	}
 
     private void FixedUpdate()
@@ -23,7 +25,7 @@ public class HeroeControl : MonoBehaviour {
         {
             if (Target.tag == "Player")
             {
-                if (Target.transform.position.x > 4f)
+                if (Target.transform.position.x > 3f)
                 {
                     _anim.SetBool("Attack", true);
                 }
@@ -34,7 +36,7 @@ public class HeroeControl : MonoBehaviour {
             }
             else if (Target.tag == "Enemy")
             {
-                if (Target.transform.position.x < -4f)
+                if (Target.transform.position.x < -3f)
                 {
                     _anim.SetBool("Attack", true);
                 }
@@ -51,6 +53,10 @@ public class HeroeControl : MonoBehaviour {
             
     }
 
+    private void LateUpdate()
+    {
+        _spriteRender.sortingOrder = (int)Camera.main.WorldToScreenPoint(_spriteRender.bounds.min).y * -1;
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -90,13 +96,10 @@ public class HeroeControl : MonoBehaviour {
     }
     #endregion
 
-
-
     public void MagicBallAttack() {
         float damage = Random.Range(state.minatk, state.maxatk);
         GameObject ball = Instantiate(MagicBall,transform.position,Quaternion.Euler(0,0,0));
-        ball.GetComponent<MagicBall>().SetTarget(Target, damage);
+        ball.GetComponent<MagicBall>().SetTarget(Target, damage,gameObject.layer);
     }
-
 
 }

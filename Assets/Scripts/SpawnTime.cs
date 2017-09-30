@@ -41,11 +41,11 @@ public class SpawnTime : MonoBehaviour {
         {
             TimeElapsed -= Time.deltaTime;
         }
-        else if (TimeElapsed < 0) {
+        if (TimeElapsed <= 0) {
             TimeElapsed = 0;
         }
 
-        TimeText.text = TimeElapsed.ToString();
+        TimeText.text = Mathf.Round(TimeElapsed).ToString();
 	}
 
     void StartSpawn() {
@@ -61,7 +61,7 @@ public class SpawnTime : MonoBehaviour {
 
 
     void SpawnEnemy() {
-        EnemySpawner.GetComponentInChildren<WaveSpawner>().NewSpawn(Random.Range(0, 2));
+        EnemySpawner.GetComponentInChildren<WaveSpawner>().NewSpawn(Random.Range(0, EnemySpawner.GetComponentInChildren<WaveSpawner>().Spawns.Length));
     }
 
     void StopSpawn() {

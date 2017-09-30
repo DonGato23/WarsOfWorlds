@@ -20,16 +20,18 @@ public class CharacterScript : MonoBehaviour
     public string TagSearch;
     public float Life = 100;
     public GameObject SightStart;//, SightEnd;
+    public GameObject Projectile;
 
     private Animator _anim;
     private bool spotted = false;
     private bool _move = true;
+    private SpriteRenderer _spriteRender;
 
     private void Start()
     {
         _anim = GetComponent<Animator>();
         Target = FindClosestEnemy(TagSearch);
-        
+        _spriteRender = GetComponent<SpriteRenderer>();
         //SightStart=Instantiate(SightStart, new Vector3(transform.position.x+ 0.642f,0f,0f),Quaternion.Euler(0f,0f,0f),transform);
         //SightEnd=Instantiate(SightEnd, new Vector3(transform.position.x + 0.642f, 0f, 0f), Quaternion.Euler(0f, 0f, 0f), transform);
     }
@@ -59,16 +61,44 @@ public class CharacterScript : MonoBehaviour
                 if (_anim.GetInteger("State") == 1)
                     _anim.SetInteger("State", 0);
                 var dist = Vector3.Distance(transform.position, Target.transform.position);
-                if (dist > 1.5f)
+                if (!Projectile)
                 {
-                    if (!spotted)
-                        transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, Speed * Time.deltaTime);
-                }
+                    if (dist > 1.5f)
+                    {
+                        if (!spotted)
+                        {
+                            transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, Speed * Time.deltaTime);
+                            if (_anim.GetInteger("State") == 4)
+                                _anim.SetInteger("State", 0);
+                        }
+                        else
+                            _anim.SetInteger("State", 4);
+                    }
 
-                else
-                {
-                    _move = false;
-                    _anim.SetInteger("State", 1);
+                    else
+                    {
+                        _move = false;
+                        _anim.SetInteger("State", 1);
+                    }
+                }
+                else {
+                    if (dist > 3.5f)
+                    {
+                        if (!spotted)
+                        {
+                            transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, Speed * Time.deltaTime);
+                            if (_anim.GetInteger("State") == 4)
+                                _anim.SetInteger("State", 0);
+                        }
+                        else
+                            _anim.SetInteger("State", 4);
+                    }
+
+                    else
+                    {
+                        _move = false;
+                        _anim.SetInteger("State", 1);
+                    }
                 }
             }
         }
@@ -81,6 +111,10 @@ public class CharacterScript : MonoBehaviour
 
     }
 
+    private void LateUpdate()
+    {
+        _spriteRender.sortingOrder = (int)Camera.main.WorldToScreenPoint(_spriteRender.bounds.min).y * -1;
+    }
 
     GameObject[] FindGameObjectsWithLayer(int layer) {
         GameObject[] goArray = FindObjectsOfType(typeof(GameObject)) as GameObject[];
@@ -130,18 +164,25 @@ public class CharacterScript : MonoBehaviour
             {
                 if (Target.GetComponentInChildren<CharacterScript>().State.weakness == State.type)
                 {
-                    Target.GetComponentInChildren<CharacterScript>().Life -= ((Random.Range(State.minatk, State.maxatk) * 2) - (Random.Range(Target.GetComponentInChildren<CharacterScript>().State.mindef, Target.GetComponentInChildren<CharacterScript>().State.maxdef) / 1.25f));
+                    Target.GetComponentInChildren<CharacterScript>().Life -= ((Random.Range(State.minatk, State.maxatk) * 4) - (Random.Range(Target.GetComponentInChildren<CharacterScript>().State.mindef, Target.GetComponentInChildren<CharacterScript>().State.maxdef) / 1.25f));
                 }
                 else
                 {
-                    Target.GetComponentInChildren<CharacterScript>().Life -= ((Random.Range(State.minatk, State.maxatk)) - (Random.Range(Target.GetComponentInChildren<CharacterScript>().State.mindef, Target.GetComponentInChildren<CharacterScript>().State.maxdef) / 1.25f));
+                    Target.GetComponentInChildren<CharacterScript>().Life -= ((Random.Range(State.minatk, State.maxatk)*2) - (Random.Range(Target.GetComponentInChildren<CharacterScript>().State.mindef, Target.GetComponentInChildren<CharacterScript>().State.maxdef) / 1.25f));
                 }
             }
             else
             {
-                Target.GetComponentInChildren<HeroeControl>().Life -= ((Random.Range(State.minatk, State.maxatk)) - (Random.Range(Target.GetComponentInChildren<HeroeControl>().state.mindef, Target.GetComponentInChildren<HeroeControl>().state.maxdef) / 1.25f));
+                Target.GetComponentInChildren<HeroeControl>().Life -= ((Random.Range(State.minatk, State.maxatk)*2) - (Random.Range(Target.GetComponentInChildren<HeroeControl>().state.mindef, Target.GetComponentInChildren<HeroeControl>().state.maxdef) / 1.25f));
             }
         }
     }
     #endregion
+
+    public void ProjectileAttack()
+    {
+        float damage = Random.Range(State.minatk, State.maxatk);
+        GameObject ball = Instantiate(Projectile, transform.position, Quaternion.Euler(0, 0, 0));
+        ball.GetComponent<MagicBall>().SetTarget(Target, damage,gameObject.layer);
+    }
 }
