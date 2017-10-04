@@ -22,7 +22,7 @@ public class LifeBarScript : MonoBehaviour {
 
     void DecreadEnergy()
     {
-        float calcLife = life / 500;
+        float calcLife = life / 2000;
         SetLifeBar(calcLife);
     }
 
