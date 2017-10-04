@@ -1,0 +1,360 @@
+fileFormatVersion: 2
+guid: 96d40fadf33584b43845858599343dbe
+timeCreated: 1504834557
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AngelAttack_0
+    21300002: AngelAttack_1
+    21300004: AngelAttack_2
+    21300006: AngelAttack_3
+    21300008: AngelAttack_4
+    21300010: AngelAttack_5
+    21300012: AngelAttack_6
+    21300014: AngelAttack_7
+    21300016: AngelAttack_8
+    21300018: AngelAttack_9
+    21300020: AngelAttack_10
+    21300022: AngelAttack_11
+    21300024: AngelAttack_12
+    21300026: AngelAttack_13
+    21300028: AngelAttack_14
+    21300030: AngelAttack_15
+    21300032: AngelAttack_16
+    21300034: AngelAttack_17
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AngelAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309
+        width: 73
+        height: 99
+      alignment: 9
+      pivot: {x: 0.6323566, y: 0.52661717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 309
+        width: 70
+        height: 125
+      alignment: 9
+      pivot: {x: 0.587837, y: 0.42973095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 309
+        width: 79
+        height: 122
+      alignment: 9
+      pivot: {x: 0.4777635, y: 0.42080313}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_3
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 309
+        width: 116
+        height: 113
+      alignment: 9
+      pivot: {x: 0.3409858, y: 0.398949}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_4
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 307
+        width: 104
+        height: 102
+      alignment: 9
+      pivot: {x: 0.44087982, y: 0.46555462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 308
+        width: 63
+        height: 94
+      alignment: 9
+      pivot: {x: 0.4024038, y: 0.51868844}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 153
+        width: 74
+        height: 98
+      alignment: 9
+      pivot: {x: 0.64243793, y: 0.5537774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_7
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 153
+        width: 78
+        height: 123
+      alignment: 9
+      pivot: {x: 0.6351336, y: 0.42858824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_8
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 153
+        width: 96
+        height: 125
+      alignment: 9
+      pivot: {x: 0.57319736, y: 0.40865016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_9
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 153
+        width: 84
+        height: 103
+      alignment: 9
+      pivot: {x: 0.23858206, y: 0.44030523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_10
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 150
+        width: 87
+        height: 102
+      alignment: 9
+      pivot: {x: 0.45961577, y: 0.48277703}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_11
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 152
+        width: 62
+        height: 94
+      alignment: 9
+      pivot: {x: 0.40082967, y: 0.5093444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 10
+        width: 72
+        height: 99
+      alignment: 9
+      pivot: {x: 0.60979575, y: 0.52661693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_13
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 10
+        width: 66
+        height: 125
+      alignment: 9
+      pivot: {x: 0.55323446, y: 0.4227038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_14
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 10
+        width: 55
+        height: 121
+      alignment: 9
+      pivot: {x: 0.1805947, y: 0.43466708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_15
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 0
+        width: 75
+        height: 125
+      alignment: 9
+      pivot: {x: 0.18378906, y: 0.4367576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_16
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 5
+        width: 91
+        height: 105
+      alignment: 9
+      pivot: {x: 0.26834342, y: 0.49163455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AngelAttack_17
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 8
+        width: 62
+        height: 95
+      alignment: 9
+      pivot: {x: 0.35832757, y: 0.509246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
