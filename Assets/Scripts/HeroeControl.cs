@@ -25,7 +25,7 @@ public class HeroeControl : MonoBehaviour {
         {
             if (Target.tag == "Player")
             {
-                if (Target.transform.position.x > 6f)
+                if (Target.transform.position.x > 3f)
                 {
                     _anim.SetBool("Attack", true);
                 }
@@ -36,7 +36,7 @@ public class HeroeControl : MonoBehaviour {
             }
             else if (Target.tag == "Enemy")
             {
-                if (Target.transform.position.x < -6f)
+                if (Target.transform.position.x < -3f)
                 {
                     _anim.SetBool("Attack", true);
                 }

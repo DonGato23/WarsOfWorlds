@@ -39,11 +39,10 @@ public class CharacterScript : MonoBehaviour
     void FixedUpdate()
     {
         spotted = Physics2D.Linecast(SightStart.transform.position, SightStart.transform.position, 1 << LayerMask.NameToLayer(LayerMask.LayerToName(gameObject.layer)));
-       
         //if(tag=="Player")
-        //  spotted = Physics2D.Linecast(new Vector3(transform.position.x + 0.7f, 0f, 0f), new Vector3(transform.position.x + 1f, 0f, 0f), 1 << LayerMask.NameToLayer(tag));
+          //  spotted = Physics2D.Linecast(new Vector3(transform.position.x + 0.7f, 0f, 0f), new Vector3(transform.position.x + 1f, 0f, 0f), 1 << LayerMask.NameToLayer(tag));
         //else if(tag=="Enemy")
-        //  spotted = Physics2D.Linecast(new Vector3(transform.position.x - 0.7f, 0f, 0f), new Vector3(transform.position.x - 1f, 0f, 0f), 1 << LayerMask.NameToLayer(tag));
+          //  spotted = Physics2D.Linecast(new Vector3(transform.position.x - 0.7f, 0f, 0f), new Vector3(transform.position.x - 1f, 0f, 0f), 1 << LayerMask.NameToLayer(tag));
         if (Life > 0)
         {
             Target = FindClosestEnemy(TagSearch);
