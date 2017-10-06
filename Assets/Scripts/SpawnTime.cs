@@ -19,6 +19,8 @@ public class SpawnTime : MonoBehaviour {
     public GameObject Player, Enemy;
     private int _playerGold, _enemyGold;
     private int _turn = 0;
+    public static bool isSpawn=false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -50,10 +52,7 @@ public class SpawnTime : MonoBehaviour {
 
     void StartSpawn() {
 
-        for (int i = 0; SpawnButtons.Length > i; i++)
-        {
-            SpawnButtons[i].enabled = true;
-        }
+        isSpawn = true;
         InvokeRepeating("SpawnEnemy", SpawnEnemySpeed, SpawnEnemySpeed);
         TimeElapsed = Duration;
         Invoke("StopSpawn", Duration);
@@ -61,14 +60,16 @@ public class SpawnTime : MonoBehaviour {
 
 
     void SpawnEnemy() {
-        EnemySpawner.GetComponentInChildren<WaveSpawner>().NewSpawn(Random.Range(0, EnemySpawner.GetComponentInChildren<WaveSpawner>().Spawns.Length));
+        if (_turn <= 4)
+            EnemySpawner.GetComponentInChildren<WaveSpawner>().NewSpawn(Random.Range(0, 2));
+        else if(_turn>4&& _turn<8)
+            EnemySpawner.GetComponentInChildren<WaveSpawner>().NewSpawn(Random.Range(0, 4));
+        else if(_turn>=8)
+            EnemySpawner.GetComponentInChildren<WaveSpawner>().NewSpawn(Random.Range(0, EnemySpawner.GetComponentInChildren<WaveSpawner>().Spawns.Length));
     }
 
     void StopSpawn() {
-        for (int i = 0; SpawnButtons.Length > i; i++)
-        {
-            SpawnButtons[i].enabled = false;
-        }
+        isSpawn = false;
         CancelInvoke("SpawnEnemy");
         TimeElapsed = TimeNewSpawn;
         Invoke("StartSpawn", TimeNewSpawn);
