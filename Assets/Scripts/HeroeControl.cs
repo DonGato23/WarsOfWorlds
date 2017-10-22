@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeroeControl : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class HeroeControl : MonoBehaviour {
     private Animator _anim;
     public GameObject MagicBall;
     private SpriteRenderer _spriteRender;
+    public Text battleOverText;
 
     // Use this for initialization
     void Start () {
@@ -18,40 +20,52 @@ public class HeroeControl : MonoBehaviour {
         _spriteRender = GetComponent<SpriteRenderer>();
 	}
 
-    private void FixedUpdate()
+    private void Update()
     {
-        Target=FindClosestEnemy(TagSearch);
-        if (Target != null)
-        {
-            if (Target.tag == "Player")
+
+            Target = FindClosestEnemy(TagSearch);
+            if (Target != null)
             {
-                if (Target.transform.position.x > 5f)
+                if (Target.tag == "Player")
                 {
-                    _anim.SetBool("Attack", true);
+                    if (Target.transform.position.x > 5f)
+                    {
+                        _anim.SetBool("Attack", true);
+                    }
+                    else
+                    {
+                        _anim.SetBool("Attack", false);
+                    }
                 }
-                else
+                else if (Target.tag == "Enemy")
                 {
-                    _anim.SetBool("Attack", false);
+                    if (Target.transform.position.x < -5f)
+                    {
+                        _anim.SetBool("Attack", true);
+                    }
+                    else
+                    {
+                        _anim.SetBool("Attack", false);
+                    }
                 }
             }
-            else if (Target.tag == "Enemy")
+            else
             {
-                if (Target.transform.position.x < -5f)
-                {
-                    _anim.SetBool("Attack", true);
-                }
-                else
-                {
-                    _anim.SetBool("Attack", false);
-                }
+                _anim.SetBool("Attack", false);
             }
 
-        }
-        else {
-            _anim.SetBool("Attack", false);
-        }
-            
     }
+
+    public void Dead()
+    {
+        _anim.SetBool("Dead", true);
+        battleOverText.text = state.type + " world \n is be defeated";
+    }
+
+    void StopGameDead() {
+        Time.timeScale = 0;
+    }
+
 
     private void LateUpdate()
     {

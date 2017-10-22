@@ -78,4 +78,9 @@ public class SpawnTime : MonoBehaviour {
         Player.GetComponentInChildren<WaveSpawner>().Gold = Player.GetComponentInChildren<WaveSpawner>().Gold + 100 + (25 * _turn);
     }
 
+    public void EndSpawn() {
+        isSpawn = false;
+        CancelInvoke("SpawnEnemy");
+    }
+
 }

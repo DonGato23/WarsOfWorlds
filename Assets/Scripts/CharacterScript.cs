@@ -26,6 +26,7 @@ public class CharacterScript : MonoBehaviour
     private bool spotted = false;
     private bool _move = true;
     private SpriteRenderer _spriteRender;
+    //private float _currentPosition;
 
     private void Start()
     {
@@ -34,6 +35,7 @@ public class CharacterScript : MonoBehaviour
         _spriteRender = GetComponent<SpriteRenderer>();
         //SightStart=Instantiate(SightStart, new Vector3(transform.position.x+ 0.642f,0f,0f),Quaternion.Euler(0f,0f,0f),transform);
         //SightEnd=Instantiate(SightEnd, new Vector3(transform.position.x + 0.642f, 0f, 0f), Quaternion.Euler(0f, 0f, 0f), transform);
+        //_currentPosition = transform.position.y;
     }
 
     void FixedUpdate()
@@ -111,9 +113,21 @@ public class CharacterScript : MonoBehaviour
 
     }
 
+    
     private void LateUpdate()
     {
         _spriteRender.sortingOrder = (int)Camera.main.WorldToScreenPoint(_spriteRender.bounds.min).y * -1;
+        /*if (transform.position.y > _currentPosition)
+        {
+            transform.localScale += new Vector3(0.01f, 0.01f);
+            _currentPosition = transform.position.y;
+        }
+        else if (transform.position.y < _currentPosition)
+        {
+            transform.localScale -= new Vector3(0.01f, 0.01f);
+            _currentPosition = transform.position.y;
+        }
+        */
     }
 
     GameObject[] FindGameObjectsWithLayer(int layer) {

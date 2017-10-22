@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
 {
 
-    private GameObject _playerHero, _enemyHeroe;
+    private GameObject _playerHero, _enemyHero;
     public GameObject PlayerSpawn, EnemySpawn;
     public LifeBarScript PlayerBar, EnemyBar;
+    public Text battleOverText;
+    public SpawnTime spawnTime;
+    private HeroeControl _playerHeroe, _enemyHeroe;
+
+
     // Use this for initialization
     void Awake()
     {
@@ -17,14 +23,18 @@ public class GameManager : Singleton<GameManager>
             _playerHero = GameObject.Find("PlayerHero");
             GameObject Player=Instantiate(PlayerSpawn, _playerHero.transform);
             PlayerBar.player = Player.GetComponent<HeroeControl>();
+            _playerHeroe = Player.GetComponent<HeroeControl>();
+            Player.GetComponent<HeroeControl>().battleOverText = battleOverText;
             //_playerHero.SetActive(true);
 
-            _enemyHeroe = GameObject.Find("EnemyHero");
-            GameObject Enemy = Instantiate(EnemySpawn, _enemyHeroe.transform);
+            _enemyHero = GameObject.Find("EnemyHero");
+            GameObject Enemy = Instantiate(EnemySpawn, _enemyHero.transform);
             Enemy.GetComponent<SpriteRenderer>().sortingLayerName = "Enemy";
             Enemy.GetComponent<HeroeControl>().TagSearch = "Player";
+            _enemyHeroe = Enemy.GetComponent<HeroeControl>();
             Enemy.layer = 9;
             EnemyBar.enemy = Enemy.GetComponent<HeroeControl>();
+            Enemy.GetComponent<HeroeControl>().battleOverText = battleOverText;
             //_enemyHeroe.SetActive(true);
             //Enemy.transform.tag = "Enemy";
 
@@ -34,4 +44,19 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    private void Update()
+    {
+        if (_playerHeroe.Life <= 0)
+        {
+            spawnTime.EndSpawn();
+            _playerHeroe.Life = 0;
+            _playerHeroe.Dead();
+
+        }
+        else if (_enemyHeroe.Life <= 0) {
+            spawnTime.EndSpawn();
+            _enemyHeroe.Life = 0;
+            _enemyHeroe.Dead();
+        }
+    }
 }
